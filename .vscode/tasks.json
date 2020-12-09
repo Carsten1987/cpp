@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "process",
+            "command": "cl",
+            "args": [
+                "/std:c++17",
+                "/Zi",
+                "/EHsc",
+                "/Wall",
+                "/wd4514",
+                "/wd4820",
+                "/wd4668",
+                "/nologo",
+                "../main.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/Debug"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
