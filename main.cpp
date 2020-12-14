@@ -30,10 +30,8 @@ int main(void)
 {
     int var;
 
-    cout << "Hello, World!" << endl;
-
+    cout << "Hello, World!" << endl << "Type any input an press Enter: ";
     cin >> var;
-
     cout << "Given Input: " << var << endl;
 
     return 0;
