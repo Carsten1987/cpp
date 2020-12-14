@@ -27,3 +27,10 @@ switch(input)
     break;
 }
 ```
+#### [04_Pointer](https://github.com/Carsten1987/cpp/tree/04_Pointer)
+Using some pointers.
+```cpp
+int a = 42;
+int *b = &a;
+cout << "a=" << *b;
+```

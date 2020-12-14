@@ -28,34 +28,33 @@ using namespace std;
 
 int main(void)
 {
-    char selection;
+    int value = 42;
+    int* pointer_to_value;
+    int* pointer2_to_value;
 
-    cout << "Decide by typing your prefered choice and Enter" << endl <<
-        "A - I like Soccer" << endl <<
-        "B - I like Icehocky" << endl <<
-        "C - I like food" << endl << "Your choice: ";
+    pointer_to_value = &value;
+    pointer2_to_value = pointer_to_value;
 
-        cin >> selection;
+    /* only the value*/
+    cout << "value: " << value << endl;
+    /* the address of value*/
+    cout << "&value: 0x" << &value << endl;
+    /* value of pointer_to_value (address of value)*/
+    cout << "pointer_to_value: 0x" << pointer_to_value << endl;
+    /* the address of pointer_to_value*/
+    cout << "&pointer_to_value: 0x" << &pointer_to_value << endl;
+    /* only the value */
+    cout << "*pointer_to_value: " << *pointer_to_value << endl;
+    cout << "pointer2_to_value: 0x" << pointer2_to_value << endl;
+    cout << "&pointer2_to_value: 0x" << &pointer2_to_value << endl;
+    cout << "*pointer2_to_value: " << *pointer2_to_value << endl;
 
-
-    switch (selection)
-    {
-    case 'A':
-    case 'a':
-        cout << "You like Soccer!" << endl;
-        break;
-    case 'B':
-    case 'b':
-        cout << "You like Icehocky!" << endl;
-        break;
-    case 'C':
-    case 'c':
-        cout << "You prefer food more than Icehocky and Soccer!" << endl;
-        break;
-    default:
-        cout << "You don't like anything!" << endl;
-        break;
-    }
+    value -= 2;
+    cout << "value: " << value << endl;
+    *pointer_to_value += 2;
+    cout << "value: " << value << endl;
+    *pointer2_to_value += 8;
+    cout << "value: " << value << endl;
 
     return 0;
 }
