@@ -28,11 +28,34 @@ using namespace std;
 
 int main(void)
 {
-    int var;
+    char selection;
 
-    cout << "Hello, World!" << endl << "Type any input an press Enter: ";
-    cin >> var;
-    cout << "Given Input: " << var << endl;
+    cout << "Decide by typing your prefered choice and Enter" << endl <<
+        "A - I like Soccer" << endl <<
+        "B - I like Icehocky" << endl <<
+        "C - I like food" << endl << "Your choice: ";
+
+        cin >> selection;
+
+
+    switch (selection)
+    {
+    case 'A':
+    case 'a':
+        cout << "You like Soccer!" << endl;
+        break;
+    case 'B':
+    case 'b':
+        cout << "You like Icehocky!" << endl;
+        break;
+    case 'C':
+    case 'c':
+        cout << "You prefer food more than Icehocky and Soccer!" << endl;
+        break;
+    default:
+        cout << "You don't like anything!" << endl;
+        break;
+    }
 
     return 0;
 }
