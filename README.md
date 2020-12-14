@@ -6,7 +6,24 @@ To run compiler with checked in configuration, it is neccessary to start VSCode 
 ### First Programm
 #### [01_HelloWorld](https://github.com/Carsten1987/cpp/tree/01_HelloWorld)
 Print Only Hello World to Console.
+```cpp
+cout << "Hello, World!" << endl;
+```
 #### [02_Input](https://github.com/Carsten1987/cpp/tree/02_Input)
 Add reading an Integer from Input.
+```cpp
+cin >> input;
+```
 #### [03_Decision](https://github.com/Carsten1987/cpp/tree/03_Decision)
 Print several Options, read Decision of User and print Result.
+```cpp
+switch(input)
+{
+  case 1:
+    one();
+    break;
+  default:
+    help();
+    break;
+}
+```
